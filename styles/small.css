@@ -171,6 +171,17 @@ main {
     padding: 10px;
 }
 
+#buttonResults .courseTaken.completed {
+    background-color: var(--other-color);
+    font-weight: 700;
+}
+
+.courseTaken.completed::before {
+    content: "\2713";
+    padding-right: 5px;
+}
+
+
 /************************** FOOTER **************************/
 footer {
 
