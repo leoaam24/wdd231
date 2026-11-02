@@ -132,7 +132,7 @@ wddButton.addEventListener("click", function () {
         buttonResults.appendChild(createP);
         totalCredits.textContent = currentCredits;
     })
-    totalCredits.textContent = courses.reduce(function (acc, course) {
+    totalCredits.textContent = newcourse.reduce(function (acc, course) {
         if (course.completed == true) {
             return acc + course.credits
         }
@@ -141,7 +141,6 @@ wddButton.addEventListener("click", function () {
 
 allButton.addEventListener("click", function () {
     buttonResults.replaceChildren();
-    currentCredits = 0;
     courses.forEach(function (course) {
         let createP = document.createElement("p");
         currentCredits += course.credits;
@@ -153,7 +152,11 @@ allButton.addEventListener("click", function () {
         buttonResults.appendChild(createP);
         totalCredits.textContent = currentCredits;
     })
-
+    totalCredits.textContent = courses.reduce(function (acc, course) {
+        if (course.completed == true) {
+            return acc + course.credits
+        }
+    }, 0)
 })
 
 
