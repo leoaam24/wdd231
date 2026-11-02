@@ -83,32 +83,39 @@ const totalCredits = document.querySelector("#totalCredits");
 const cseButton = document.querySelector("#CSE");
 const wddButton = document.querySelector("#WDD");
 const allButton = document.querySelector("#All");
-let currentCredits = 0;
 
 courses.forEach(function (course) {
     let createP = document.createElement("p");
-    currentCredits += course.credits;
     createP.setAttribute('class', 'courseTaken');
     createP.textContent = course.title;
     buttonResults.appendChild(createP);
-    totalCredits.textContent = currentCredits;
 })
+
+totalCredits.textContent = courses.reduce(function (acc, course) {
+    if (course.completed == true) {
+        return acc + course.credits
+    }
+}, 0)
+
 
 cseButton.addEventListener("click", function () {
     buttonResults.replaceChildren();
-    currentCredits = 0;
     const newcourse = courses.filter(course => course.subject == "CSE");
     newcourse.forEach(function (course) {
         let createP = document.createElement("p");
-        currentCredits += course.credits;
         createP.setAttribute('class', 'courseTaken');
         if (course.completed == true) {
             createP.classList.toggle('completed');
         }
         createP.textContent = course.title;
         buttonResults.appendChild(createP);
-        totalCredits.textContent = currentCredits;
+
     })
+    totalCredits.textContent = newcourse.reduce(function (acc, course) {
+        if (course.completed == true) {
+            return acc + course.credits
+        }
+    }, 0)
 })
 
 wddButton.addEventListener("click", function () {
@@ -117,7 +124,6 @@ wddButton.addEventListener("click", function () {
     const newcourse = courses.filter(course => course.subject == "WDD");
     newcourse.forEach(function (course) {
         let createP = document.createElement("p");
-        currentCredits += course.credits;
         createP.setAttribute('class', 'courseTaken');
         if (course.completed == true) {
             createP.classList.toggle('completed');
@@ -126,7 +132,11 @@ wddButton.addEventListener("click", function () {
         buttonResults.appendChild(createP);
         totalCredits.textContent = currentCredits;
     })
-
+    totalCredits.textContent = courses.reduce(function (acc, course) {
+        if (course.completed == true) {
+            return acc + course.credits
+        }
+    }, 0)
 })
 
 allButton.addEventListener("click", function () {
