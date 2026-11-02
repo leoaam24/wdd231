@@ -73,6 +73,7 @@ nav.open {
     color: var(--primary-color);
     font-weight: 900;
     font-size: 24px;
+    transition: background-color .5s ease;
 }
 
 .navItem:hover {

@@ -9,6 +9,7 @@
 
     nav {
         display: flex;
+        border-bottom: 1px solid #eee;
         justify-content: space-evenly;
         flex-direction: row;
 
