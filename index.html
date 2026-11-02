@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 231 - Leo Alfred A. Mosquera</title>
+    <meta name="description"
+        content="Homepage for my WDD 231: Web Frontend Development at Brigham Young University - Idaho">
+    <meta name="author" content="Leo Alfred A. Mosquera">
+
+    <link href="./styles/normalize.css" rel="stylesheet">
+    <link href="./styles/base.css" rel="stylesheet">
+    <link href="./styles/large.css" rel="stylesheet">
+
+    <script src="./scripts/index.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="./images/shop.svg" alt="personal-logo" id="personalLogo">
+        <span id="myName">Leo Alfred A. Mosquera</span>
+        <span id="hmbrgrBtn" class="hmbrgrBtn"></span>
+    </header>
+    <nav>
+        <a class="navItem current" href="#">Home</a>
+        <a class="navItem" href="#">Chamber</a>
+        <a class="navItem" href="#">Final</a>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <section id="aboutMe" class="sectionCard">
+            <h2>About Me</h2>
+            <p>Hi! I am Leo. I am from the City of Digos, Philippines. I am currently working as a CRM Platform
+                expert and
+                currently studying Software Development. I am happily married to my wife and we are blessed with a
+                daughter. I am looking forward to learning more about modern technologies esepcially web
+                development.</p>
+        </section>
+        <section id="studentPhoto" class="sectionCard">
+            <h2>Student Photo</h2>
+            <img src="./images/profile.webp" alt="my-photo" width="400">
+        </section>
+        <section id="courses" class="sectionCard">
+            <h2>Web Certificate Courses</h2>
+            <div id="buttonSelection">
+                <button id="All">All</button>
+                <button id="CSE">CSE</button>
+                <button id="WDD">WDD</button>
+            </div>
+            <div id="buttonResults">
+                <p>WDD 130</p>
+                <p>WDD 131</p>
+                <p>WDD 231</p>
+            </div>
+            <p>The total credits for course listed above is 6 </p>
+        </section>
+    </main>
+    <footer>
+        <div id="socialLinks">
+            <a href="#"><img src="./images/github.svg" alt="github-icon" width="50"></a>
+            <a href="#"><img src="./images/linkedin.svg" alt="linkedIn-icon" width="50"></a>
+            <a href="#"><img src="./images/facebook.svg" alt="facebook-icon" width="50"></a>
+        </div>
+        <div id="footerText">
+            <p>© <span id="currentyear"></span> Leo Alfred A. Mosquera, Philippines</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

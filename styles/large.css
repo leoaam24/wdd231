@@ -1,0 +1,77 @@
+@media screen and (min-width: 768px) {
+
+    /************************** HEADER **************************/
+    #hmbrgrBtn {
+        display: none;
+    }
+
+    /************************** NAVIGATION **************************/
+
+    nav {
+        justify-content: space-evenly;
+        flex-direction: row;
+
+    }
+
+    .navItem {
+        text-align: center;
+        border: none;
+        margin: 0;
+        width: 100%;
+    }
+
+    /************************** MAIN **************************/
+    main {
+        padding: 20px;
+        max-width: 80%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: auto;
+    }
+
+    main h1 {
+        grid-column: 1/3;
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    #aboutMe {
+        grid-column: 1/2;
+        width: 100%;
+    }
+
+    #studentPhoto {
+        grid-column: 2/3;
+    }
+
+    #courses {
+        grid-column: 1/3;
+    }
+
+    #aboutMe h2,
+    #studentPhoto h2,
+    #courses h2 {
+        margin-top: 0;
+    }
+
+    #buttonResults {
+        display: flex;
+    }
+
+    #buttonResults p {
+        padding: 10px;
+        width: 100%;
+    }
+
+    /************************** FOOTER **************************/
+    footer {
+        padding: 0;
+    }
+
+    #socialLinks {
+        margin: 10px;
+    }
+
+}

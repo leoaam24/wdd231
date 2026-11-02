@@ -1,0 +1,183 @@
+:root {
+    --primary-color: #514b23;
+    --secondary-color: #656839;
+    --lighter-color: #cbc9ad;
+    --non-complement-color: #cbd0b9;
+    --other-color: #bddbd0;
+}
+
+body {
+    display: block;
+}
+
+/************************** HEADER **************************/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    gap: 15px;
+    background-color: var(--primary-color);
+    color: var(--non-complement-color);
+    padding: 10px;
+}
+
+#personalLogo {
+    align-self: center;
+}
+
+#myName {
+    font-size: 24px;
+    align-self: center;
+}
+
+
+#hmbrgrBtn {
+    align-self: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.hmbrgrBtn::before {
+    content: "\2630";
+    font-size: 24px;
+}
+
+.hmbrgrBtn.open::before {
+    content: "\2716";
+    font-size: 24px;
+    color: var(--non-complement-color);
+}
+
+#hmbrgrBtn:hover {
+    cursor: pointer;
+}
+
+/************************** NAVIGATION **************************/
+nav {
+    display: none;
+}
+
+nav.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #eee;
+}
+
+.navItem {
+    text-align: left;
+    max-width: 100%;
+    padding: .75rem;
+    border: 1px solid black;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.navItem:hover {
+    cursor: pointer;
+    background-color: var(--other-color);
+}
+
+.navItem.current {
+    background-color: var(--non-complement-color);
+}
+
+
+/************************** MAIN **************************/
+main {
+    display: block;
+    max-width: 900px;
+    padding: 20px;
+}
+
+#aboutMe,
+#studentPhoto,
+#courses {
+    display: block;
+    background-color: #dddddd;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 100%;
+}
+
+#aboutMe h2,
+#studentPhoto h2,
+#courses h2 {
+    background-color: var(--primary-color);
+    color: var(--non-complement-color);
+    padding: 10px;
+    margin-bottom: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#aboutMe p {
+    padding: 15px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+#studentPhoto img {
+    box-sizing: border-box;
+    object-fit: contain;
+    padding: 30px;
+    max-width: 100%;
+}
+
+#buttonSelection {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+#buttonSelection button {
+    width: 80%;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#buttonResults {
+    padding: 10px;
+}
+
+#buttonResults p {
+    background-color: #eee;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #d9d9d9;
+    text-align: center;
+    font-weight: 500;
+}
+
+#courses p {
+    text-align: center;
+    padding: 10px;
+}
+
+/************************** FOOTER **************************/
+footer {
+
+    padding: 10px;
+}
+
+#socialLinks {
+    text-align: center;
+    margin: 5px;
+}
+
+#footerText {
+    background-color: #eee;
+    padding: 10px;
+}
+
+#footerText p {
+    text-align: center;
+    margin: 5px;
+}
+
+#socialLinks a {
+    margin: 10px;
+}
