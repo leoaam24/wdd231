@@ -10,6 +10,19 @@ body {
     display: block;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "IBM Plex Serif", serif;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+}
+
 /************************** HEADER **************************/
 header {
     display: grid;
