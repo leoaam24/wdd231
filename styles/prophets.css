@@ -1,0 +1,56 @@
+h1 {
+    text-align: center;
+    font-weight: 700;
+    color: lightseagreen;
+}
+
+#cards {
+    padding: 30px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 15px -10px;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#card {
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    padding: 20px;
+    line-height: .5;
+}
+
+#cardName,
+#cardDate,
+#cardPlace {
+    text-align: center;
+}
+
+#card img {
+    border: -10px solid #ddd;
+    box-shadow: 0 0 15px 2px;
+}
+
+@media screen and (max-width:760px) {
+    #cards {
+        padding: 10px;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #card {
+        max-width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    #card img {
+        min-width: 0;
+        max-width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        object-fit: contain;
+    }
+}
