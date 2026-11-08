@@ -106,9 +106,6 @@ nav.open ol {
     padding: 0;
 }
 
-nav.open ol {
-    margin: 0;
-}
 
 nav.open ol li {
     display: flex;
