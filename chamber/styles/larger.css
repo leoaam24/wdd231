@@ -12,11 +12,10 @@
 
     /*************** NAVIGATION ***************/
     nav.open ol {
-        justify-content: space-evenly;
         flex-direction: row;
     }
 
-    nav.open ol a {
+    nav.open ol li {
         text-align: center;
         width: 100%;
     }
@@ -35,7 +34,7 @@
         max-width: 100%;
         align-self: baseline;
         box-sizing: border-box;
-        justify-items: auto;
+        justify-items: center;
     }
 
     .cardInfo.grid img {

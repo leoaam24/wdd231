@@ -28,9 +28,7 @@ p {
     font-family: 'Fira Sans', sans-serif;
 }
 
-main {
-    margin: 0 auto;
-}
+
 
 /*************** HEADER ***************/
 
@@ -90,7 +88,6 @@ header #websiteBrand img {
 }
 
 /*************** NAVIGATION ***************/
-
 nav {
     display: none;
 }
@@ -103,20 +100,31 @@ nav.open {
 nav.open ol {
     display: flex;
     flex-direction: column;
+    margin: 0;
     padding: 0;
+}
+
+nav.open ol {
     margin: 0;
 }
 
-.navItem {
+nav.open ol li {
+    display: flex;
     list-style-type: none;
+    margin: 0;
+
+}
+
+.navItem {
     text-decoration: none;
     color: #ffff;
     background-color: var(--secondary-color);
     padding: 36px;
+    margin: 0;
     font-weight: 700;
     cursor: pointer;
-    border: 1px solid #eee;
     transition: background-color .5s ease;
+    width: 100%;
 }
 
 .navItem:hover {
@@ -130,6 +138,7 @@ nav.open ol {
 
 /*************** MAIN ***************/
 main {
+    margin: 0 auto;
     padding: 20px;
 }
 
