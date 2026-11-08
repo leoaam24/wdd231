@@ -1,0 +1,73 @@
+@media screen and (min-width: 768px) {
+
+    body {
+        max-width: 100%;
+    }
+
+
+    /*************** HEADER ***************/
+    #hmbrgrBtn {
+        display: none;
+    }
+
+    /*************** NAVIGATION ***************/
+    nav.open ol {
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+    nav.open ol a {
+        text-align: center;
+        width: 100%;
+    }
+
+    /*************** MAIN ***************/
+
+    /****** CARD GRID ******/
+    #cards.grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .cardInfo.grid {
+        padding: 20px;
+        max-width: 100%;
+        align-self: baseline;
+        box-sizing: border-box;
+        justify-items: auto;
+    }
+
+    .cardInfo.grid img {
+        grid-row: 1/4;
+        justify-self: center;
+    }
+
+    .cardInfo.grid span p {
+        text-align: left;
+    }
+
+    /****** CARD LIST ******/
+    #cards.list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card.list {
+        box-shadow: none;
+    }
+
+    .cardInfo.list span {
+        justify-content: center;
+    }
+
+
+
+    /*************** FOOTER ***************/
+    footer {
+        padding: 25px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        justify-items: center;
+    }
+}

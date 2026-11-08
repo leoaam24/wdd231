@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce Website — Directory</title>
+    <meta name="description"
+        content="Directory page for Chamber of Commerce website assignment in WDD 231: Web Frontend Development at Brigham Young University - Idaho">
+    <meta name="author" content="Leo Alfred A. Mosquera">
+    <meta property="og:title" content="Chamber of Commerce — Directory Page">
+    <meta property="og:description"
+        content="Directory page for Chamber of Commerce website assignment in WDD 231: Web Frontend Development at Brigham Young University - Idaho">
+    <meta property="og:image" content="https://i.ibb.co/KxjtTQxn/logo.png">
+    <meta property="og:url" content="#">
+
+    <link rel="icon" href="./favicon.ico">
+
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <script src="./scripts/base.js" defer></script>
+    <script src="./scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div id="websiteBrand">
+            <img src="./images/logo.webp" alt="davao city chamber of commerce logo" width="160" height="160">
+            <h1 id="websiteTitle">Davao City Chamber of Commerce</h1>
+        </div>
+        <span id="hmbrgrBtn" class=".hmbrgrBtn open"></span>
+    </header>
+    <nav class="nav open">
+        <ol><a href="#" class="navItem">Home</a>
+            <a href="#" class="navItem">Directory</a>
+            <a href="#" class="navItem">Join</a>
+            <a href="#" class="navItem">Discover</a>
+        </ol>
+    </nav>
+    <main>
+        <h2>Directory</h2>
+        <div id="viewButtons">
+            <button id="grid-view" class="viewButton">Grid</button>
+            <button id="list-view" class="viewButton">List</button>
+        </div>
+        <section id="cards" class="cards grid">
+        </section>
+    </main>
+    <footer>
+        <div id="nameAndContacts">
+            <p><strong>Davao City Chamber of Commerce and Industry Inc.</strong></p>
+            <p>2nd Floor Davao City Chamber of Commerce and Industry Building</p>
+            <p> Bajada, Davao City 8000</p>
+            <p>info@davaochamber.com</p>
+            <p>+63 ​(82) 222-1402 / (28) / 226-4433​</p>
+        </div>
+        <div id="socials">
+            <a href="https://github.com/leoaam24/wdd231"><img src="./images/github.svg" alt="github-icon"
+                    width="50"></a>
+            <a href="https://www.linkedin.com/in/leo-alfred-mosquera-005425144/"><img src="./images/linkedin.svg"
+                    alt="linkedIn-icon" width="50"></a>
+            <a href="https://www.facebook.com/leoaam24/"><img src="./images/facebook.svg" alt="facebook-icon"
+                    width="50"></a>
+        </div>
+        <div id="devInfo">
+            <p>WDD231 Class Project</p>
+            <p>Leo Alfred A. Mosquera</p>
+            <p>© <span id="currentyear"></span> Davao City Chamber of Commerce</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
