@@ -57,7 +57,9 @@ header #websiteBrand img {
     padding-left: 10px;
 }
 
-#websiteBrand h1 {
+#websiteTitle {
+    font-family: 'PT Serif', serif;
+    font-weight: 800;
     color: #ffff;
     min-width: 0;
     font-size: 22px;
