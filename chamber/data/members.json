@@ -1,6 +1,7 @@
 [
     {
         "businessname": "Bank of the Philippine Islands",
+        "address": "Azuela Cove, Lanang, Davao City",
         "email": "help@bpi.com.ph",
         "phone": "(082) 226 3941",
         "website": "https://www.bpi.com.ph/",
@@ -10,6 +11,7 @@
     },
     {
         "businessname": "Asia United Bank",
+        "address": "Central Plaza I, J.P. Laurel Ave., Davao City",
         "email": "customercare@aub.com.ph",
         "phone": "(082) 300 2755",
         "website": "https://www.aub.com.ph/",
@@ -19,6 +21,7 @@
     },
     {
         "businessname": "DITO Telecommunity Corporation",
+        "address": "SM Annex Building, Second Floor, Cyberzone, Quimpo Blvd, Talomo, Davao City",
         "email": "customercare@dito.ph",
         "phone": "+63 91 231 4321",
         "website": "https://dito.ph/",
@@ -28,6 +31,7 @@
     },
     {
         "businessname": "Malayan Insurance",
+        "address": "J.P. Laurel Avenue, Davao City",
         "email": "malayan@malayan.com",
         "phone": "(082) 234 1765",
         "website": "https://www.malayan.com/",
@@ -37,15 +41,17 @@
     },
     {
         "businessname": "Pearl Farm Beach Resort",
+        "address": "Bo. Adecor, Kaputian District, Island Garden City of Samal",
         "email": "pearlfarmresortreservations@anflocor.com",
         "phone": "(082) 235 1234",
         "website": "https://pearlfarmresort.com/",
         "logo": "./images/pf-logo.png",
         "businesscode": "pearl-farm",
-        "membershiplevel": "Bronze"
+        "membershiplevel": "Silver"
     },
     {
         "businessname": "MAPECON Phils Inc",
+        "address": "Mapecon Bldg., Purok 10, Nacilla Village, Bugac, Maa, Davao City",
         "email": "marketing@mapecon.com",
         "phone": "(082) 282 0600",
         "website": "https://mapecon.com/davao/",
@@ -55,11 +61,12 @@
     },
     {
         "businessname": "Seda Abreeza",
+        "address": "J.P. Laurel Avenue, Bajada, Davao City 8000",
         "email": "sedaabreeza@ayalalandhospitality.com",
         "phone": "(082) 244 3000",
         "website": "https://abreeza.sedahotels.com/",
         "logo": "./images/seda-logo.svg",
         "businesscode": "seda-abreeza",
-        "membershiplevel": "Gold"
+        "membershiplevel": "Silver"
     }
 ]

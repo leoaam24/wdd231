@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce Website — Home</title>
+    <meta name="description"
+        content="Directory page for Chamber of Commerce website assignment in WDD 231: Web Frontend Development at Brigham Young University - Idaho">
+    <meta name="author" content="Leo Alfred A. Mosquera">
+    <meta property="og:title" content="Chamber of Commerce — Home Page">
+    <meta property="og:description"
+        content="Home page for Chamber of Commerce website assignment in WDD 231: Web Frontend Development at Brigham Young University - Idaho">
+    <meta property="og:image" content="https://leoaam24.github.io/wdd231/chamber/images/logo.webp">
+    <meta property="og:url" content="https://leoaam24.github.io/wdd231/chamber/directory">
+
+    <link rel="icon" href="./favicon.ico">
+
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/small.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <script src="./scripts/base.js" defer></script>
+    <script type="module" src="./scripts/weatherapi.mjs"></script>
+    <script type="module" src="./scripts/spotlight.mjs"></script>
+</head>
+
+<body>
+    <header>
+        <div id="websiteBrand">
+            <img src="./images/logo.webp" alt="davao city chamber of commerce logo" width="160" height="160">
+            <span id="websiteTitle">Davao City Chamber of Commerce</span>
+        </div>
+        <span id="hmbrgrBtn" class=".hmbrgrBtn open"></span>
+    </header>
+    <nav class="nav open">
+        <ol>
+            <li><a href="./index.html" class="navItem">Home</a></li>
+            <li><a href="./directory.html" class="navItem">Directory</a></li>
+            <li><a href="#" class="navItem">Join</a></li>
+            <li><a href="#" class="navItem">Discover</a></li>
+        </ol>
+    </nav>
+    <main class="home">
+        <h1>Home</h1>
+        <div id="hero-container">
+            <img id="heroImage" src="./images/hero-image.webp" alt="vector image of davao city">
+            <button id="joinBtn">Join Now</button>
+        </div>
+        <section id="currentEvents">
+            <h2>Current Events</h2>
+            <hr>
+            <img src="./images/qr-for-date.webp" alt="event image with QR code" id="currentEventImage">
+            <p>The biggest and longest-running agribusiness exhibition in Mindanao expands, bigger than ever.</p>
+            <p>The 𝑫𝒂𝒗𝒂𝒐 𝑨𝒈𝒓𝒊 𝑻𝒓𝒂𝒅𝒆 𝑬𝒙𝒑𝒐 (𝑫𝑨𝑻𝑬) grows bolder and stronger alongside the 𝑨𝑺𝑬𝑨𝑵
+                𝑰𝒏𝒏𝒐𝒗𝒂𝒕𝒊𝒐𝒏 𝑺𝒖𝒎𝒎𝒊𝒕, creating a landmark platform where agriculture, innovation,
+                investment, and
+                enterprise converge in a single event. Together, these events put Davao at the forefront of showcasing
+                MSMEs,
+                breakthrough technologies, business matching, B2B networking, and cross-border opportunities shaping the
+                region's
+                future.</p>
+            <p>Gain valuable insights into the future of Philippine agriculture through industry leaders, government
+                agencies, and
+                expert discussions on high-value crops, livestock, aquaculture, and the industries driving the country's
+                next phase of
+                growth.</p>
+            <p>Discover the trends driving tomorrow's agricultural economy:</p>
+            <ol>
+                <li>Ube</li>
+                <li>Bananas</li>
+                <li>Coconuts</li>
+                <li>Coffee</li>
+                <li>Durian</li>
+                <li>Livestock</li>
+                <li>Poultry</li>
+                <li>Aquaculture</li>
+                <li>Emerging Commodities</li>
+            </ol>
+            <p>𝐃𝐞𝐚𝐥𝐬 𝐠𝐫𝐨𝐰 𝐰𝐡𝐞𝐫𝐞 𝐭𝐡𝐞 𝐫𝐢𝐠𝐡𝐭 𝐩𝐞𝐨𝐩𝐥𝐞 𝐦𝐞𝐞𝐭.</p>
+            <p id="eventDate">September 17 - 19, 2026</p>
+            <p id="eventLocation">SMX Convention Center, Lanang, Davao City</p>
+            <p>𝐓𝐡𝐞 𝐜𝐨𝐧𝐯𝐞𝐫𝐬𝐚𝐭𝐢𝐨𝐧𝐬 𝐭𝐡𝐚𝐭 𝐬𝐡𝐚𝐩𝐞 𝐭𝐡𝐞 𝐧𝐞𝐱𝐭 𝐡𝐚𝐫𝐯𝐞𝐬𝐭 𝐬𝐭𝐚𝐫𝐭 𝐡𝐞𝐫𝐞.
+                Secure your
+                spot as an Exhibitor or Delegate today.</p>
+        </section>
+        <div id="weatherAndSpotlightContainer">
+            <section id="weather-info">
+                <h3>Weather</h3>
+                <hr>
+                <h4><span id="temp-value"></span> ºC</h4>
+                <img src="#" alt="weather-placeholder" id="weatherImg">
+                <div class="weather-info-2">
+                    <h4><span id="weather-condition">Partly Cloudy</span></h4>
+                </div>
+            </section>
+            <section id="spotlightSection">
+                <h3>Spotlight</h3>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div id="nameAndContacts">
+            <p><strong>Davao City Chamber of Commerce and Industry Inc.</strong></p>
+            <p>2nd Floor Davao City Chamber of Commerce and Industry Building</p>
+            <p> Bajada, Davao City 8000</p>
+            <p>info@davaochamber.com</p>
+            <p>+63 ​(82) 222-1402 / (28) / 226-4433​</p>
+        </div>
+        <div id="socials">
+            <a href="https://github.com/leoaam24/wdd231"><img src="./images/github.svg" alt="github-icon"
+                    width="50"></a>
+            <a href="https://www.linkedin.com/in/leo-alfred-mosquera-005425144/"><img src="./images/linkedin.svg"
+                    alt="linkedIn-icon" width="50"></a>
+            <a href="https://www.facebook.com/leoaam24/"><img src="./images/facebook.svg" alt="facebook-icon"
+                    width="50"></a>
+        </div>
+        <div id="devInfo">
+            <p>WDD231 Class Project</p>
+            <p>Leo Alfred A. Mosquera</p>
+            <p>© <span id="currentyear"></span> Davao City Chamber of Commerce</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

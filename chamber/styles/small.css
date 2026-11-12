@@ -2,6 +2,7 @@
     --primary-color: #0c4921;
     --secondary-color: #4F7F34;
     --tertiary-color: #E3B82E;
+    --border: 1px solid #eee;
 }
 
 * {
@@ -9,9 +10,11 @@
 }
 
 body {
-    display: block;
+    display: flex;
+    flex-direction: column;
     max-width: 900px;
     margin: 0 auto;
+    min-height: 100dvh;
 }
 
 
@@ -137,6 +140,7 @@ nav.open ol li {
 
 /*************** MAIN ***************/
 main {
+    flex: 1;
     margin: 0 auto;
     padding: 20px;
 }
@@ -144,6 +148,196 @@ main {
 main h2 {
     text-align: center;
 }
+
+
+/****** HOME ******/
+
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+.home h1 {
+    text-align: center;
+}
+
+#hero-container {
+    margin-bottom: 20px;
+}
+
+#heroImage {
+    box-shadow: 0 10px 15px -10px #d5d5d5;
+}
+
+#heroImage,
+
+#currentEventImage {
+    object-fit: cover;
+    max-width: 100%;
+    min-width: 0%;
+}
+
+#joinBtn {
+    padding: .75rem;
+    border-radius: 50px;
+    max-width: 100%;
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 20px auto;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: background-color .5s ease, transform .3s ease, border-radius 1s ease-out, color 1s ease-out, letter-spacing 1s ease-out;
+}
+
+#joinBtn:hover {
+    transform: scale(1.1);
+    border-radius: 5px;
+    background-color: #E3B82E;
+    color: #0c4921;
+    letter-spacing: 5px;
+}
+
+#currentEvents {
+    border: var(--border);
+    padding: 25px;
+    border-radius: 15px;
+    background-color: #0c4921;
+    color: #fff;
+    box-shadow: 0 0 5px 1px var(--primary-color);
+}
+
+
+#currentEvents:hover h2 {
+    letter-spacing: 5px;
+}
+
+#currentEvents p {
+    transition: line-height .5s ease-out;
+}
+
+#currentEvents:hover p {
+    line-height: 1.5;
+}
+
+#currentEvents h2 {
+    max-width: 100%;
+    color: #fff;
+    max-height: 100%;
+    height: 100%;
+    transition: letter-spacing .5s ease;
+}
+
+
+#currentEvents hr {
+    border: var(--border);
+    margin: 20px auto;
+}
+
+#currentEvents ol li {
+    list-style-type: disc;
+}
+
+#eventDate::before {
+    content: "🗓️";
+}
+
+#eventLocation::before {
+    content: "📍";
+}
+
+#weather-info {
+    border: var(--border);
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 0 5px 1px var(--primary-color);
+}
+
+#weather-info h3 {
+    transition: letter-spacing .5s ease;
+}
+
+#weather-info:hover h3 {
+    letter-spacing: 5px;
+}
+
+#weather-info h4 {
+    transition: transform .5s ease;
+}
+
+#weather-info:hover h4 {
+    transform: scale(1.1);
+}
+
+#weather-info hr {
+    border: var(--border);
+}
+
+#spotlightSection {
+    border: var(--border);
+    padding: 10px;
+    transition: background-color .5s ease;
+}
+
+#spotlightSection:hover {
+    background-color: transparent;
+}
+
+#spotlightSection:hover h3 {
+    letter-spacing: 5px;
+}
+
+
+#spotlightSection h3 {
+    text-align: center;
+    transition: letter-spacing .5s ease;
+}
+
+#spotlightSection .card {
+    display: flex;
+    flex-direction: column;
+    border: var(--border);
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: #fff;
+    line-height: 1;
+    transition: transform .5s ease;
+}
+
+#spotlightSection .card:hover {
+    transform: scale(1.1);
+}
+
+#spotlightSection .card hr {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+#spotlightSection .card img {
+    flex: 1;
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+    min-width: 0%;
+    margin: 20px 0;
+}
+
+#spotlightSection .card p {
+    margin: 5px 0;
+}
+
+
+/****** DIRECTORY ******/
 
 #viewButtons {
     display: flex;
@@ -178,7 +372,7 @@ main h2 {
 }
 
 
-/****** CARD GRID ******/
+/****** CARD GRID — DIRECTORY ******/
 .card.grid {
     text-align: center;
     border: 1px solid #ddd;
@@ -239,7 +433,7 @@ main h2 {
     padding-left: 5px;
 }
 
-/****** CARD LIST ******/
+/****** CARD LIST — DIRECTORY ******/
 .card.list {
     margin: 0;
     border: 1px solid #d5d5d5;
