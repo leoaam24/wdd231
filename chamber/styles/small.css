@@ -129,7 +129,10 @@ nav.open ol li {
     width: 100%;
 }
 
-.navItem:hover {
+
+
+.navItem:hover,
+.navItem.current {
     background-color: var(--tertiary-color);
     color: var(--primary-color);
     text-transform: uppercase;
