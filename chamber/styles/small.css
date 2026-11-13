@@ -259,6 +259,7 @@ main h2 {
     box-shadow: 0 0 5px 1px var(--primary-color);
 }
 
+
 #weather-info h3 {
     transition: letter-spacing .5s ease;
 }
@@ -277,6 +278,11 @@ main h2 {
 
 #weather-info hr {
     border: var(--border);
+}
+
+#advanceWeatherDescription {
+    text-transform: capitalize;
+    font-weight: 400;
 }
 
 #spotlightSection {

@@ -4,7 +4,7 @@ if (weatherInfo) {
     const tempValue = document.querySelector('#temp-value');
     const weatherImg = document.querySelector('#weatherImg');
     const weatherCond = document.querySelector('#weather-condition');
-    // const windSpeed = document.querySelector('#wind-speed');
+    const advanceDays = document.querySelector('#advanceWeather');
 
 
     const url = 'https://api.openweathermap.org/data/2.5/weather?q=Digos&appid=2a4b1a24eb793a6e0322abadb8e01f64&units=metric';
@@ -30,7 +30,8 @@ if (weatherInfo) {
             const response = await fetch(weatherdays);
             if (response.ok) {
                 const data = await response.json();
-                console.table(data); // this is for testing the call
+                // console.table(data); // this is for testing the call
+                displayAdvance(data.data)
             } else {
                 throw Error(await response.text);
             }
@@ -41,7 +42,7 @@ if (weatherInfo) {
 
     apiFetch();
 
-    // apiFetchmanydays();
+    apiFetchmanydays();
 
 
     function displayResults(weatherData) {
@@ -55,25 +56,38 @@ if (weatherInfo) {
         weatherCond.textContent = weatherCond.textContent.replace(/\b\w/g, c => c.toUpperCase());
         weatherImg.setAttribute('src', iconsrc);
         weatherImg.setAttribute('alt', 'weather-icon');
-        // windSpeed.textContent = windspeed;
+    }
+
+    function displayAdvance(weatherData) {
+        weatherData.forEach(function (chunk, i) {
+            if (i <= 2) {
+                const date = new Date(chunk.dt * 1000);
+                const iconsrc = `https://openweathermap.org/img/w/${chunk.weather[0].icon}.png`;
+
+                let day = document.createElement("p");
+                let weather = document.createElement("p");
+                let temp = document.createElement("p");
+                let icon = document.createElement("img");
+                let hr = document.createElement("hr");
+
+                day.textContent = date.toString();
+                weather.textContent = chunk.weather[0].description;
+                temp.textContent = `${chunk.temp.min.toFixed(0)} ºC`;
+
+                icon.setAttribute('src', iconsrc);
+                icon.setAttribute('alt', `weather icon for ${date.toString()}`);
+                weather.setAttribute('id', 'advanceWeatherDescription');
+
+                advanceDays.appendChild(day);
+                advanceDays.appendChild(weather);
+                advanceDays.appendChild(icon);
+                advanceDays.appendChild(temp);
+                advanceDays.appendChild(hr);
+            }
+        })
 
 
 
-        // const tempValueNumber = document.querySelector("#temp-value").textContent;
-        // const windSpeedNumber = document.querySelector("#wind-speed").textContent;
-        // const windChill = document.querySelector("#wind-chill");
-        // const tempCtoF = (tempValueNumber * 9 / 5) + 32;
-        // const windSpeedMph = (windSpeedNumber * 2.23694);
-
-        // if (tempCtoF <= 50 && windSpeedMph > 3) {
-        //     const windChillFormula = (35.74 + (0.6215 * tempCtoF)) - (35.75 * (windSpeedMph ** 0.16)) + (0.4275 * tempCtoF * (windSpeedMph ** 0.16));
-        //     const windChillWatt = (12.1452 + (11.6222 * (Math.sqrt(windSpeedMph))) - (1.16222 * windSpeedMph)) * (33 - tempCtoF);
-        //     const windChilltoC = (windChillFormula - 32) * 5 / 9;
-        //     console.log('true');
-        //     windChill.textContent = `${windChilltoC.toFixed(2)} ºC`;
-        // } else {
-        //     windChill.textContent = "N/A";
-        // }
     }
 
 }
