@@ -100,6 +100,50 @@ nav.open {
 
 
 /************************** MAIN **************************/
+
+/****** COURSE — HOME ******/
+dialog {
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+}
+
+dialog::backdrop {
+    background-color: rgb(0 0 0 / 50%);
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+}
+
+#coursesTaken {
+    cursor: pointer;
+    transition: box-shadow .2s ease-out;
+}
+
+#coursesTaken:hover {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: inset 0px 2px 10px 1px #fff;
+}
+
+#coursesTaken:active {
+    box-shadow: inset 0px 2px 10px 1px gray;
+}
+
+#closeModal {
+    padding: .75rem;
+    cursor: pointer;
+}
+
 main {
     display: block;
     max-width: 900px;

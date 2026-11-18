@@ -83,12 +83,18 @@ const totalCredits = document.querySelector("#totalCredits");
 const cseButton = document.querySelector("#CSE");
 const wddButton = document.querySelector("#WDD");
 const allButton = document.querySelector("#All");
+const coursesCards = document.querySelectorAll('#coursesTaken');
+
 
 courses.forEach(function (course) {
     let createP = document.createElement("p");
     createP.setAttribute('class', 'courseTaken');
     createP.textContent = course.title;
+    createP.setAttribute('id', 'coursesTaken');
     buttonResults.appendChild(createP);
+    createP.addEventListener('click', function () {
+        displayCourseDetails(course);
+    })
 })
 
 totalCredits.textContent = courses.reduce(function (acc, course) {
@@ -104,11 +110,15 @@ cseButton.addEventListener("click", function () {
     newcourse.forEach(function (course) {
         let createP = document.createElement("p");
         createP.setAttribute('class', 'courseTaken');
+        createP.setAttribute('id', 'coursesTaken');
         if (course.completed == true) {
             createP.classList.toggle('completed');
         }
         createP.textContent = course.title;
         buttonResults.appendChild(createP);
+        createP.addEventListener('click', function () {
+            displayCourseDetails(course);
+        })
 
     })
     totalCredits.textContent = newcourse.reduce(function (acc, course) {
@@ -125,12 +135,16 @@ wddButton.addEventListener("click", function () {
     newcourse.forEach(function (course) {
         let createP = document.createElement("p");
         createP.setAttribute('class', 'courseTaken');
+        createP.setAttribute('id', 'coursesTaken');
         if (course.completed == true) {
             createP.classList.toggle('completed');
         }
         createP.textContent = course.title;
         buttonResults.appendChild(createP);
         totalCredits.textContent = currentCredits;
+        createP.addEventListener('click', function () {
+            displayCourseDetails(course);
+        })
     })
     totalCredits.textContent = newcourse.reduce(function (acc, course) {
         if (course.completed == true) {
@@ -145,12 +159,16 @@ allButton.addEventListener("click", function () {
         let createP = document.createElement("p");
         currentCredits += course.credits;
         createP.setAttribute('class', 'courseTaken');
+        createP.setAttribute('id', 'coursesTaken');
         if (course.completed == true) {
             createP.classList.toggle('completed');
         }
         createP.textContent = course.title;
         buttonResults.appendChild(createP);
         totalCredits.textContent = currentCredits;
+        createP.addEventListener('click', function () {
+            displayCourseDetails(course);
+        })
     })
     totalCredits.textContent = courses.reduce(function (acc, course) {
         if (course.completed == true) {
@@ -158,6 +176,34 @@ allButton.addEventListener("click", function () {
         }
     }, 0)
 })
+
+function displayCourseDetails(course) {
+    dialog.innerHTML = `
+    <button id="closeModal" aria-label="Close">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+  `;
+    dialog.showModal();
+
+    document.querySelector('#closeModal').addEventListener('click', () => {
+        dialog.close();
+    });
+}
+
+// Close the modal when the user clicks outside of it (on the backdrop)
+dialog.addEventListener('click', (event) => {
+    if (event.target === courseDetails) {
+        courseDetails.close();
+    }
+});
+
+
+
+
 
 
 

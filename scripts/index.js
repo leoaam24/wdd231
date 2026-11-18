@@ -1,7 +1,9 @@
 const currentyear = document.querySelector("#currentyear");
 const lastModified = document.querySelector("#lastModified");
 const hmbrgrBtn = document.querySelector("#hmbrgrBtn");
-const navigation = document.querySelector("nav")
+const navigation = document.querySelector("nav");
+const dialog = document.querySelector('#course-details');
+const closeDialog = document.querySelector('#close-modal');
 
 const today = new Date();
 
@@ -13,4 +15,5 @@ hmbrgrBtn.addEventListener("click", function () {
     navigation.classList.toggle("open");
     hmbrgrBtn.classList.toggle("open");
 })
+
 
