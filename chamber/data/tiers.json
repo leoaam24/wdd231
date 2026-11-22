@@ -1,0 +1,44 @@
+[
+    {
+        "tier": "Non-Profit",
+        "cost": "No Fee",
+        "benefits": [
+            "Discounts on products and services: DCCCII members can often receive discounts on products and services from Chamber partners",
+            "Access to events: DCCCII members are invited to attend a variety of events, including networking events, educational seminars, and trade shows.",
+            "Representation: DCCCII members have a voice in the Chamber's advocacy work.",
+            "Networking opportunities: DCCCII members have the opportunity to network with other business leaders in the Davao City community."
+        ]
+    },
+    {
+        "tier": "Bronze",
+        "cost": "PHP 7,500.00 per year",
+        "benefits": [
+            "All Non-profit Benefits",
+            "Access to DCCCII's network of business leaders and government officials.",
+            "Discounts on DCCCII's events and training programs.",
+            "Representation on DCCCII's committees and boards.",
+            "The ability to vote on DCCCII's policies and decisions.",
+            "The ability to use DCCCII's logo and branding materials."
+        ]
+    },
+    {
+        "tier": "Silver",
+        "cost": "PHP 10,000.00 per year",
+        "benefits": [
+            "All Regular Membership benefits.",
+            "A dedicated account manager.",
+            "Priority registration for DCCCII's events and training programs.",
+            "A reserved parking space at DCCCII's events."
+        ]
+    },
+    {
+        "tier": "Gold",
+        "cost": "PHP 20,000.00 per year",
+        "benefits": [
+            "All Regular and Silver Membership benefits.",
+            "A seat on DCCCII's Board of Directors.",
+            "The ability to sponsor DCCCII's events and training programs.",
+            "The ability to name a DCCCII scholarship recipient."
+        ]
+    }
+]

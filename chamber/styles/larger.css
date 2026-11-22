@@ -154,6 +154,37 @@
     }
 
 
+    /****** JOIN PAGE ******/
+
+    .join {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    #form-container {
+        margin: 0 auto;
+        width: 40%;
+    }
+
+    #submitBtn {
+        max-width: 100%;
+        color: #fff;
+        width: 100%;
+        background-color: var(--primary-color);
+        font-weight: 800;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: transform .5s ease;
+    }
+
+    #submitBtn:hover {
+        transform: scale(1.02);
+    }
+
+    #submitBtn:active {
+        transform: scale(.95);
+    }
+
 
     /*************** FOOTER ***************/
     footer {

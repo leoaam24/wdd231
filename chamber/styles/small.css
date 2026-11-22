@@ -5,7 +5,75 @@
     --border: 1px solid #eee;
 }
 
-* {
+
+@property --glow-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+
+@keyframes spin-glow {
+    to {
+        --glow-angle: 360deg;
+    }
+}
+
+
+@keyframes fadeColorNp {
+    from {
+        border: inherit;
+        transform: scale(1);
+    }
+
+    to {
+        border: inherit;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes fadeColorBr {
+    from {
+        border: inherit;
+        transform: scale(1);
+    }
+
+    to {
+        border: inherit;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes fadeColorSi {
+    from {
+        border: inherit;
+        transform: scale(1);
+    }
+
+    to {
+        border: inherit;
+
+        transform: scale(1.05);
+    }
+}
+
+@keyframes fadeColorGo {
+    from {
+        border: inherit;
+        transform: scale(1);
+    }
+
+    to {
+        border: inherit;
+
+        transform: scale(1.05);
+    }
+}
+
+
+
+
+@keyframe * {
     box-sizing: border-box;
 }
 
@@ -475,6 +543,169 @@ main h2 {
     word-break: break-all;
     text-align: left;
     padding-left: 5px;
+}
+
+
+/****** JOIN PAGE ******/
+#form-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.fieldset-box {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border: 1px solid #d5d5d5;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+form label:not(:first-of-type) {
+    margin-top: 15px;
+}
+
+input {
+    padding: 14px;
+    border-radius: 10px;
+}
+
+input:invalid {
+    border-left: 4px solid red;
+}
+
+#membershipSelector {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 20px;
+}
+
+.sbs {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    padding: 24px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-weight: 700;
+    border: 3px solid transparent;
+    background:
+        linear-gradient(#fff, #ffffff) padding-box,
+        conic-gradient(from var(--glow-angle),
+            var(--secondary-color), #00ffaa, var(--primary-color)) border-box;
+
+    animation: spin-glow 3s ease-in infinite;
+
+}
+
+
+
+.sbs input[type=radio] {
+    margin-right: 8px;
+    appearance: none;
+}
+
+
+.sbs:has(input[value="np"]:checked) {
+    background: var(--primary-color);
+    text-transform: uppercase;
+    color: #fff;
+    animation: fadeColorNp 1.5s ease infinite alternate;
+}
+
+.sbs:has(input[value="bronze"]:checked) {
+    background: linear-gradient(#6b3e1b, #6b3e1b);
+    text-transform: uppercase;
+    color: #fff;
+    animation: fadeColorBr 1.5s ease infinite alternate;
+}
+
+
+.sbs:has(input[value="silver"]:checked) {
+    background: linear-gradient(#3a3d40, #3a3d40) padding-box;
+    text-transform: uppercase;
+    color: #fff;
+    animation: fadeColorSi 1.5s ease infinite alternate;
+}
+
+.sbs:has(input[value="gold"]:checked) {
+    background: linear-gradient(#856a1d, #856a1d);
+    text-transform: uppercase;
+    color: #fff;
+    animation: fadeColorGo 1.5s ease infinite alternate;
+}
+
+
+dialog:modal {
+    display: flex;
+    flex-direction: column;
+    width: min(90%, 400px);
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+    padding: 20px;
+    line-height: 1.5;
+    font-size: 1rem;
+    word-wrap: break-word;
+}
+
+dialog h2 {
+    margin: 0;
+}
+
+dialog ol {
+    margin: 0;
+}
+
+dialog ol li {
+    list-style-type: disc;
+    margin: 10px;
+}
+
+dialog p {
+    margin: 5px;
+}
+
+#modalCloseBtn {
+    cursor: pointer;
+    margin: 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: .5rem;
+    border-radius: 10px;
+    box-shadow: inset 0 1.5px 5px 1px white;
+    font-weight: 500;
+}
+
+#modalCloseBtn:active {
+    box-shadow: inset 0 1.5px 5px 1px grey;
+}
+
+dialog::backdrop {
+    background-color: rgb(0 0 0 / 50%);
+}
+
+/****** JOIN PAGE ******/
+
+.thankyou>h1 {
+    text-align: center;
+}
+
+#infos {
+    border: 2px solid #eee;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /*************** FOOTER ***************/
