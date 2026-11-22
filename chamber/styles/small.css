@@ -693,7 +693,12 @@ dialog::backdrop {
     background-color: rgb(0 0 0 / 50%);
 }
 
-/****** JOIN PAGE ******/
+/****** THANK YOU PAGE ******/
+
+.thank-you {
+    display: flex;
+    flex-direction: column;
+}
 
 .thankyou>h1 {
     text-align: center;
@@ -706,6 +711,11 @@ dialog::backdrop {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+#backBtn {
+    padding: 24px;
+    align-self: center;
 }
 
 /*************** FOOTER ***************/
