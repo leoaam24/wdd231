@@ -11,7 +11,7 @@
     <meta property="og:title" content="Chamber of Commerce — Join Page">
     <meta property="og:description"
         content="Join page for Chamber of Commerce website assignment in WDD 231: Web Frontend Development at Brigham Young University - Idaho">
-    <meta property="og:image" content="https://leoaam24.github.io/wdd231/chamber/images/dcccii.png">
+    <meta property="og:image" content="https://leoaam24.github.io/wdd231/chamber/images/dcccii.webp">
     <meta property="og:url" content="https://leoaam24.github.io/wdd231/chamber/directory">
 
     <link rel="icon" href="./favicon.ico">
@@ -52,20 +52,21 @@
                 <fieldset class="fieldset-box">
                     <legend>Applicant Information</legend>
                     <label class="top">First Name<input type="text" id="fname" name="fname" autofocus
-                            autocomplete="given-name" required></label>
+                            autocomplete="given-name" title="Your First Name" required></label>
                     <label class="top">Last Name<input type="text" id="lname" name="lname" autocomplete="family-name"
-                            required></label>
+                            title="Your Last Name" required></label>
                     <label class="top">Organization Title<input type="text" id="position" name="position"
-                            autocomplete="organization-title" pattern="^[A-Za-z\- ]{7,}$"></label>
+                            autocomplete="organization-title" title="Your Position in the Organization"
+                            pattern="^[A-Za-z\- ]{7,}$"></label>
                     <label class="top">Email<input type="email" id="email" name="email" placeholder="email@email.com"
-                            autocomplete="email" required></label>
+                            autocomplete="email" title="Your Email" required></label>
                     <label class="top">Phone<input type="tel" id="phone" name="phone" autocomplete="tel"
-                            required></label>
+                            title="A Phone Number with dashes" required></label>
                 </fieldset>
                 <fieldset class="fieldset-box">
                     <legend>Business Application</legend>
                     <label class="top">Business Name<input type="text" id="business" name="business"
-                            autocomplete="organization" required></label>
+                            autocomplete="organization" title="Your Organization's Name" required></label>
                     <div id="membershipSelector">Membership Level</div>
                     <label class="sbs" data-tier="np"><input type="radio" id="r1" name="level" value="np">NP
                         (Non-Profit)</label>
@@ -76,7 +77,7 @@
                     <label class="sbs" data-tier="gold"><input type="radio" id="r4" name="level" value="gold">Gold
                         Membership</label>
                     <label class="top">Organization Description<textarea id="bDescription"
-                            name="bDescription"></textarea></label>
+                            title="Your Organization's Description" name="bDescription"></textarea></label>
                     <input type="hidden" id="timestamp" name="timestamp">
                 </fieldset>
                 <input type="submit" value="Register My Business" class="submitBtn" id="submitBtn">
