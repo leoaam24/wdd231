@@ -1,4 +1,4 @@
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1026px) {
 
     body {
         display: flex;
@@ -10,6 +10,10 @@
     /*************** HEADER ***************/
     #hmbrgrBtn {
         display: none;
+    }
+
+    #visitorStatus {
+        width: 30%;
     }
 
     /*************** NAVIGATION ***************/
@@ -183,6 +187,60 @@
 
     #submitBtn:active {
         transform: scale(.95);
+    }
+
+    /****** DISCOVER PAGE ******/
+
+
+    .discover h1 {
+        text-align: center;
+    }
+
+    #areasContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .interestCard {
+        display: grid;
+        grid-template-areas:
+            "title title"
+            "image description"
+            "image address"
+            "button button";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+
+
+    .interestTitle {
+        text-align: left;
+        grid-area: title;
+    }
+
+    figure {
+        min-width: none;
+        max-width: 100%;
+        width: 100%;
+        grid-area: image;
+        margin: 15px auto;
+    }
+
+    .interestImg {
+        text-align: left;
+    }
+
+    .interestDescription {
+        grid-area: description;
+    }
+
+    .interestAddress {
+        grid-area: address;
+    }
+
+    .interestBtn {
+        grid-area: button;
     }
 
 
